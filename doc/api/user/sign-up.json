@@ -1,0 +1,47 @@
+{
+  "resource": "User",
+  "http_method": "POST",
+  "route": "/api/auth",
+  "description": "Sign-up",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/api/auth",
+      "request_body": "email=new_user%40domain.com&password=exampleexample&password_confirmation=exampleexample&confirm_success_url=http%3A%2F%2Fmy-new-app.moku.io%2F",
+      "request_headers": {
+        "Host": "my-new-app.moku.io",
+        "Accept": "application/vnd.my-new-app.v1+json",
+        "Client-Version": "Web/1.1",
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/x-www-form-urlencoded",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"status\": \"success\",\n  \"data\": {\n    \"id\": 2,\n    \"provider\": \"email\",\n    \"uid\": \"new_user@domain.com\",\n    \"name\": null,\n    \"nickname\": null,\n    \"image\": null,\n    \"email\": \"new_user@domain.com\",\n    \"created_at\": \"2016-09-20T12:47:35.289Z\",\n    \"updated_at\": \"2016-09-20T12:47:35.289Z\"\n  }\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "Vary": "Origin",
+        "ETag": "W/\"3bf2c25d5bbcde512a294c3d439bcdc7\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "d738ddea-ac56-4d1c-be8c-4b6cef98b867",
+        "X-Runtime": "0.482251",
+        "Content-Length": "234"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://my-new-app.moku.io/api/auth\" -d 'email=new_user%40domain.com&password=exampleexample&password_confirmation=exampleexample&confirm_success_url=http%3A%2F%2Fmy-new-app.moku.io%2F' -X POST \\\n\t-H \"Accept: application/vnd.my-new-app.v1+json\" \\\n\t-H \"Client-Version: Web/1.1\" \\\n\t-H \"Content-Type: application/x-www-form-urlencoded\""
+    }
+  ]
+}

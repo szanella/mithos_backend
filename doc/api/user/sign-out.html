@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User API</title>
+    <meta charset="utf-8">
+    <style>
+      
+body {
+  font-family: Helvetica,Arial,sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 18px;
+  color: #404040;
+}
+
+.container {
+  width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  zoom: 1;
+}
+
+pre {
+  background-color: #f5f5f5;
+  display: block;
+  padding: 8.5px;
+  margin: 0 0 18px;
+  line-height: 18px;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+td.required .name:after {
+  float: right;
+  content: "required";
+  font-weight: normal;
+  color: #F08080;
+}
+
+a{
+  color: #0069d6;
+  text-decoration: none;
+  line-height: inherit;
+  font-weight: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  color: #404040;
+}
+
+h1 {
+  margin-bottom: 18px;
+  font-size: 30px;
+  line-height: 36px;
+}
+h2 {
+  font-size: 24px;
+  line-height: 36px;
+}
+h3{
+  font-size: 18px;
+  line-height: 36px;
+}
+h4 {
+  font-size: 16px;
+  line-height: 36px;
+}
+
+table{
+  width: 100%;
+  margin-bottom: 18px;
+  padding: 0;
+  border-collapse: separate;
+  font-size: 13px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  border-spacing: 0;
+  border: 1px solid #ddd;
+}
+
+table th {
+  padding-top: 9px;
+  font-weight: bold;
+  vertical-align: middle;
+  border-bottom: 1px solid #ddd;
+}
+table th+th, table td+td {
+  border-left: 1px solid #ddd;
+}
+table th, table td {
+  padding: 10px 10px 9px;
+  line-height: 18px;
+  text-align: left;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>User API</h1>
+
+      <div class="article">
+        <h2>Sign-out</h2>
+        <h3>DELETE /api/auth/sign_out</h3>
+
+
+
+          <h3>Request</h3>
+
+            <h4>Headers</h4>
+            <pre class="request headers">Host: my-new-app.moku.io
+Accept: application/vnd.my-new-app.v1+json
+Client-Version: Web/1.1
+Token-Type: Bearer
+Uid: user_1@test.com
+Access-Token: E51sT1l5X0BVdRl1HgWfGw
+Client: yduYfHErpFAYvfjaOl0hCQ
+Expiry: 1474376254
+Content-Type: application/x-www-form-urlencoded
+Cookie: </pre>
+
+          <h4>Route</h4>
+          <pre class="request route highlight">DELETE /api/auth/sign_out</pre>
+
+
+
+            <h4>cURL</h4>
+            <pre class="request curl">curl &quot;http://my-new-app.moku.io/api/auth/sign_out&quot; -d &#39;&#39; -X DELETE \
+	-H &quot;Accept: application/vnd.my-new-app.v1+json&quot; \
+	-H &quot;Client-Version: Web/1.1&quot; \
+	-H &quot;Token-Type: Bearer&quot; \
+	-H &quot;Uid: user_1@test.com&quot; \
+	-H &quot;Access-Token: E51sT1l5X0BVdRl1HgWfGw&quot; \
+	-H &quot;Client: yduYfHErpFAYvfjaOl0hCQ&quot; \
+	-H &quot;Expiry: 1474376254&quot; \
+	-H &quot;Content-Type: application/x-www-form-urlencoded&quot;</pre>
+
+            <h3>Response</h3>
+              <h4>Headers</h4>
+              <pre class="response headers">X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Content-Type: application/json; charset=utf-8
+Vary: Origin
+ETag: W/&quot;7363e85fe9edee6f053a4b319588c086&quot;
+Cache-Control: max-age=0, private, must-revalidate
+Set-Cookie: _generic_backend_session=V3M4Z1RpVWZBVXFTQWV0am82c3c4UlpJd2FJTDNiM0hUQloyZGUrL1dXcmY0TEVtUENkWHd6OHhGWjBQdDJKTjVqODVEM21KdlNvRlNpZmhEbElUOUE9PS0tREhjdHU1b2NacWxWdmNyeWo4MEpEZz09--dd92f788071cd7e4be409d693e8e2d993ea984b9; path=/; HttpOnly
+X-Request-Id: 351c2325-a800-4166-9007-83a607a0c5c3
+X-Runtime: 0.124229
+Content-Length: 16</pre>
+            <h4>Status</h4>
+            <pre class="response status">200 OK</pre>
+              <h4>Body</h4>
+              <pre class="response body">{
+  &quot;success&quot;: true
+}</pre>
+      </div>
+    </div>
+  </body>
+</html>

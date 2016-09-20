@@ -1,0 +1,53 @@
+{
+  "resource": "User",
+  "http_method": "DELETE",
+  "route": "/api/auth/sign_out",
+  "description": "Sign-out",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "DELETE",
+      "request_path": "/api/auth/sign_out",
+      "request_body": null,
+      "request_headers": {
+        "Host": "my-new-app.moku.io",
+        "Accept": "application/vnd.my-new-app.v1+json",
+        "Client-Version": "Web/1.1",
+        "Token-Type": "Bearer",
+        "Uid": "user_1@test.com",
+        "Access-Token": "E51sT1l5X0BVdRl1HgWfGw",
+        "Client": "yduYfHErpFAYvfjaOl0hCQ",
+        "Expiry": "1474376254",
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/x-www-form-urlencoded",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"success\": true\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "Vary": "Origin",
+        "ETag": "W/\"7363e85fe9edee6f053a4b319588c086\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "Set-Cookie": "_generic_backend_session=V3M4Z1RpVWZBVXFTQWV0am82c3c4UlpJd2FJTDNiM0hUQloyZGUrL1dXcmY0TEVtUENkWHd6OHhGWjBQdDJKTjVqODVEM21KdlNvRlNpZmhEbElUOUE9PS0tREhjdHU1b2NacWxWdmNyeWo4MEpEZz09--dd92f788071cd7e4be409d693e8e2d993ea984b9; path=/; HttpOnly",
+        "X-Request-Id": "351c2325-a800-4166-9007-83a607a0c5c3",
+        "X-Runtime": "0.124229",
+        "Content-Length": "16"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://my-new-app.moku.io/api/auth/sign_out\" -d '' -X DELETE \\\n\t-H \"Accept: application/vnd.my-new-app.v1+json\" \\\n\t-H \"Client-Version: Web/1.1\" \\\n\t-H \"Token-Type: Bearer\" \\\n\t-H \"Uid: user_1@test.com\" \\\n\t-H \"Access-Token: E51sT1l5X0BVdRl1HgWfGw\" \\\n\t-H \"Client: yduYfHErpFAYvfjaOl0hCQ\" \\\n\t-H \"Expiry: 1474376254\" \\\n\t-H \"Content-Type: application/x-www-form-urlencoded\""
+    }
+  ]
+}

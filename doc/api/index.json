@@ -1,0 +1,37 @@
+{
+  "resources": [
+    {
+      "name": "User",
+      "examples": [
+        {
+          "description": "Sign-out",
+          "link": "user/sign-out.json",
+          "groups": "all",
+          "route": "/api/auth/sign_out",
+          "method": "delete"
+        },
+        {
+          "description": "Sign-in",
+          "link": "user/sign-in.json",
+          "groups": "all",
+          "route": "/api/auth/sign_in",
+          "method": "post"
+        },
+        {
+          "description": "Sign-in with wrong password",
+          "link": "user/sign-in_with_wrong_password.json",
+          "groups": "all",
+          "route": "/api/auth/sign_in",
+          "method": "post"
+        },
+        {
+          "description": "Sign-up",
+          "link": "user/sign-up.json",
+          "groups": "all",
+          "route": "/api/auth",
+          "method": "post"
+        }
+      ]
+    }
+  ]
+}

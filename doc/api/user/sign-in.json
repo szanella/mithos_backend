@@ -1,0 +1,52 @@
+{
+  "resource": "User",
+  "http_method": "POST",
+  "route": "/api/auth/sign_in",
+  "description": "Sign-in",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/api/auth/sign_in",
+      "request_body": "email=user_1%40test.com&password=examplepassword123",
+      "request_headers": {
+        "Host": "my-new-app.moku.io",
+        "Accept": "application/vnd.my-new-app.v1+json",
+        "Client-Version": "Web/1.1",
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/x-www-form-urlencoded",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": {\n    \"id\": 1,\n    \"email\": \"user_1@test.com\",\n    \"provider\": \"email\",\n    \"uid\": \"user_1@test.com\",\n    \"name\": null,\n    \"nickname\": null,\n    \"image\": null\n  }\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "access-token": "YqJKbuOU97td4G4oIMlfNw",
+        "token-type": "Bearer",
+        "client": "mei8mLqwpjD1V3HPgvCB-Q",
+        "expiry": "1475671655",
+        "uid": "user_1@test.com",
+        "Content-Type": "application/json; charset=utf-8",
+        "Vary": "Origin",
+        "ETag": "W/\"0d7690072ff9688f5d01836f4f07f5a4\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "107d4a26-be3c-45eb-901b-0229a7fc414a",
+        "X-Runtime": "0.189573",
+        "Content-Length": "127"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://my-new-app.moku.io/api/auth/sign_in\" -d 'email=user_1%40test.com&password=examplepassword123' -X POST \\\n\t-H \"Accept: application/vnd.my-new-app.v1+json\" \\\n\t-H \"Client-Version: Web/1.1\" \\\n\t-H \"Content-Type: application/x-www-form-urlencoded\""
+    }
+  ]
+}

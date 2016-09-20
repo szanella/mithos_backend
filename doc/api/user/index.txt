@@ -1,0 +1,151 @@
+Sign-out
+--------
+
+Request:
+  DELETE /api/auth/sign_out
+  Accept: application/vnd.my-new-app.v1+json
+  Access-Token: E51sT1l5X0BVdRl1HgWfGw
+  Client: yduYfHErpFAYvfjaOl0hCQ
+  Client-Version: Web/1.1
+  Content-Type: application/x-www-form-urlencoded
+  Cookie: 
+  Expiry: 1474376254
+  Host: my-new-app.moku.io
+  Token-Type: Bearer
+  Uid: user_1@test.com
+
+Response:
+  Status: 200 OK
+  Cache-Control: max-age=0, private, must-revalidate
+  Content-Length: 16
+  Content-Type: application/json; charset=utf-8
+  ETag: W/"7363e85fe9edee6f053a4b319588c086"
+  Set-Cookie: _generic_backend_session=V3M4Z1RpVWZBVXFTQWV0am82c3c4UlpJd2FJTDNiM0hUQloyZGUrL1dXcmY0TEVtUENkWHd6OHhGWjBQdDJKTjVqODVEM21KdlNvRlNpZmhEbElUOUE9PS0tREhjdHU1b2NacWxWdmNyeWo4MEpEZz09--dd92f788071cd7e4be409d693e8e2d993ea984b9; path=/; HttpOnly
+  Vary: Origin
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  X-Request-Id: 351c2325-a800-4166-9007-83a607a0c5c3
+  X-Runtime: 0.124229
+  X-XSS-Protection: 1; mode=block
+
+  {
+    "success": true
+  }
+
+
+Sign-in
+-------
+
+Request:
+  POST /api/auth/sign_in
+  Accept: application/vnd.my-new-app.v1+json
+  Client-Version: Web/1.1
+  Content-Type: application/x-www-form-urlencoded
+  Cookie: 
+  Host: my-new-app.moku.io
+
+  email=user_1%40test.com&password=examplepassword123
+
+Response:
+  Status: 200 OK
+  Cache-Control: max-age=0, private, must-revalidate
+  Content-Length: 127
+  Content-Type: application/json; charset=utf-8
+  ETag: W/"0d7690072ff9688f5d01836f4f07f5a4"
+  Vary: Origin
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  X-Request-Id: 107d4a26-be3c-45eb-901b-0229a7fc414a
+  X-Runtime: 0.189573
+  X-XSS-Protection: 1; mode=block
+  access-token: YqJKbuOU97td4G4oIMlfNw
+  client: mei8mLqwpjD1V3HPgvCB-Q
+  expiry: 1475671655
+  token-type: Bearer
+  uid: user_1@test.com
+
+  {
+    "data": {
+      "id": 1,
+      "email": "user_1@test.com",
+      "provider": "email",
+      "uid": "user_1@test.com",
+      "name": null,
+      "nickname": null,
+      "image": null
+    }
+  }
+
+
+Sign-in with wrong password
+---------------------------
+
+Request:
+  POST /api/auth/sign_in
+  Accept: application/vnd.my-new-app.v1+json
+  Client-Version: Web/1.1
+  Content-Type: application/x-www-form-urlencoded
+  Cookie: 
+  Host: my-new-app.moku.io
+
+  email=user_1%40test.com&password=wrong
+
+Response:
+  Status: 401 Unauthorized
+  Cache-Control: no-cache
+  Content-Length: 59
+  Content-Type: application/json; charset=utf-8
+  Vary: Origin
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  X-Request-Id: 22c8ddaa-aa62-401d-8973-da3ae9af1d38
+  X-Runtime: 0.005335
+  X-XSS-Protection: 1; mode=block
+
+  {
+    "errors": [
+      "Invalid login credentials. Please try again."
+    ]
+  }
+
+
+Sign-up
+-------
+
+Request:
+  POST /api/auth
+  Accept: application/vnd.my-new-app.v1+json
+  Client-Version: Web/1.1
+  Content-Type: application/x-www-form-urlencoded
+  Cookie: 
+  Host: my-new-app.moku.io
+
+  email=new_user%40domain.com&password=exampleexample&password_confirmation=exampleexample&confirm_success_url=http%3A%2F%2Fmy-new-app.moku.io%2F
+
+Response:
+  Status: 200 OK
+  Cache-Control: max-age=0, private, must-revalidate
+  Content-Length: 234
+  Content-Type: application/json; charset=utf-8
+  ETag: W/"3bf2c25d5bbcde512a294c3d439bcdc7"
+  Vary: Origin
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  X-Request-Id: d738ddea-ac56-4d1c-be8c-4b6cef98b867
+  X-Runtime: 0.482251
+  X-XSS-Protection: 1; mode=block
+
+  {
+    "status": "success",
+    "data": {
+      "id": 2,
+      "provider": "email",
+      "uid": "new_user@domain.com",
+      "name": null,
+      "nickname": null,
+      "image": null,
+      "email": "new_user@domain.com",
+      "created_at": "2016-09-20T12:47:35.289Z",
+      "updated_at": "2016-09-20T12:47:35.289Z"
+    }
+  }
