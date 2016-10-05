@@ -18,7 +18,7 @@ class API::CustomersController < ApplicationController
     if @customer.save
       show
     else
-      render json: @company.errors, status: :unprocessable_entity
+      render json: @customer.errors, status: :unprocessable_entity
     end
   end
 
@@ -27,7 +27,7 @@ class API::CustomersController < ApplicationController
     if @customer.save
       show
     else
-      render json: @company.errors, status: :unprocessable_entity
+      render json: @customer.errors, status: :unprocessable_entity
     end
   end
 

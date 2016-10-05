@@ -24,4 +24,11 @@ class Performance < ActiveRecord::Base
   validates :service_id, presence: true
   validates :date, presence: true
   validates :notes, length: {maximum: 200}
+
+  def as_json(options = {})
+    super(options.merge(
+                     except: [:service_id, :customer_id, :created_at, :updated_at],
+                     include: [:service, :customer]
+    ))
+  end
 end
