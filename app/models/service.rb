@@ -15,14 +15,24 @@ class Service < ActiveRecord::Base
   validates :description, presence: true, length: {maximum: 50}
   validates :price, presence: true, numericality: {greater_than: 0}
 
+  def formatted_price
+    Money.euro(price * 100).format(thousands_separator: ".", decimal_mark: ",")
+  end
+
   def as_json(options = {})
     super(options.merge(
+        :methods => [:formatted_price],
+        :include => [
+            performances: {
+                include: [:customer],
+                except: [:service_id, :customer_id, :created_at, :updated_at]
+            }
+        ],
         :except => [:created_at, :updated_at]
     ))
   end
 
   def to_s
-    formatted_price = Money.euro(price * 100).format(thousands_separator: ".", decimal_mark: ",")
     "#{description} (#{formatted_price})"
   end
 end
